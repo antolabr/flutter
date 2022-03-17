@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'produit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,8 +31,47 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: const Center(
-        child: Text("hello world")
+      body: ListView(
+        shrinkWrap: true,
+        padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+        children: const <Widget>[
+          Produit(
+            name:"iPhone",
+            description: "c'est extremement nul!",
+            price: 100,
+            image: "assets/iphone.png",
+          ),
+          Produit(
+            name:"huawei",
+            description: "c'est pas ouf",
+            price: 10,
+            image: "assets/huawei.png",
+          ),
+          Produit(
+            name:"PC",
+            description: "c'est pour coder",
+            price: 1000,
+            image: "assets/pc.png",
+          ),
+          Produit(
+            name:"pixel",
+            description: "ca passe",
+            price: 100,
+            image: "assets/pixel.png",
+          ),
+          Produit(
+            name:"S10",
+            description: "c'est sympa",
+            price: 200,
+            image: "assets/S10.png",
+          ),
+          Produit(
+            name:"xiaomi",
+            description: "ca va",
+            price: 100,
+            image: "assets/xiaomi.png",
+          ),
+        ]
       ),
     );
   }
