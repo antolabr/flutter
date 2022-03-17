@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // ne plus avoir de bandeau test ^^
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -39,8 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(title,
-            style: const TextStyle(fontWeight: FontWeight.bold)),
+        child: Image.asset("clans-emotes.png"),
       )
     );
   }
