@@ -45,12 +45,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [Container(
             height: 300.0,
             width: 300.0,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.red,
-              image: DecorationImage(
+              image: const DecorationImage(
                 image : AssetImage("clans-emotes.png"),
-                fit: BoxFit.cover
-              )
+                //fit: BoxFit.cover
+              ),
+              border: Border.all(
+                color: Colors.black,
+                width: 12,
+              ),
+              borderRadius: BorderRadius.circular(12)
             ),
             child: Align(
               alignment: const FractionalOffset(0.2,0.4),
@@ -64,9 +69,20 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             height: 300.0,
             width: 300.0,
-            color: Colors.yellow,
+            decoration: BoxDecoration(
+              color: Colors.yellow,
+              image: const DecorationImage(
+                image : AssetImage("chaton4Karasu.png"),
+                //fit: BoxFit.cover
+              ),
+              border: Border.all(
+                color: Colors.black,
+                width: 12,
+              ),
+              borderRadius: BorderRadius.circular(12)
+            ),
             child: Align(
-              alignment: const FractionalOffset(0.2,0.4),
+              alignment: const FractionalOffset(0.1,0.2),
               child: Container(
                 height: 40.0,
                 width: 60.0,
