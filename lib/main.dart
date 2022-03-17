@@ -58,11 +58,22 @@ class _MyHomePageState extends State<MyHomePage> {
               borderRadius: BorderRadius.circular(12)
             ),
             child: Align(
-              alignment: const FractionalOffset(0.2,0.4),
+              alignment: const FractionalOffset(0.5,0.0),
               child: Container(
-                height: 40.0,
-                width: 60.0,
-                color: Colors.yellow,
+                height: 60.0,
+                width: 100.0,
+                decoration: BoxDecoration(
+                  color: Colors.yellow,
+                  image: const DecorationImage(
+                    image : AssetImage("chaton4Karasu.png"),
+                    //fit: BoxFit.cover
+                  ),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(12)
+                ),
               )
             ),
           ),
