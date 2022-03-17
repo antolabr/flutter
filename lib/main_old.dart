@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'le flutter des clans'),
       // ne plus avoir de bandeau test ^^
       debugShowCheckedModeBanner: false,
     );
