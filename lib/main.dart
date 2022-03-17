@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Image.asset("clans-emotes.png"),
+      body: const Center(
+        child: Icon(Icons.email),
       )
     );
   }
