@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
           title: Text(title),
         ),
         body: const Center(
-          
+          child: Text('test')
         ));
   }
 }
