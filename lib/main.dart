@@ -41,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               _showDialog(context);
             },
-            child: const Text("bijour le monde"),
           ),
         ));
   }
