@@ -40,8 +40,21 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: Icon(Icons.email),
+      body: Center(
+        child: Container(
+          height: 100.0,
+          width: 100.0,
+          color: Colors.red,
+          child: Align(
+            alignment: const FractionalOffset(0.2,0.6),
+            child: Container(
+              height: 40.0,
+              width: 40.0,
+              color: Colors.yellow,
+            )
+          )
+
+        )
       )
     );
   }
