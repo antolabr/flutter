@@ -41,19 +41,40 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Container(
-          height: 100.0,
-          width: 100.0,
-          color: Colors.red,
-          child: Align(
-            alignment: const FractionalOffset(0.2,0.6),
-            child: Container(
-              height: 40.0,
-              width: 40.0,
-              color: Colors.yellow,
-            )
-          )
-
+        child: Column(
+          children: [Container(
+            height: 300.0,
+            width: 300.0,
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              image: DecorationImage(
+                image : AssetImage("clans-emotes.png"),
+                fit: BoxFit.cover
+              )
+            ),
+            child: Align(
+              alignment: const FractionalOffset(0.2,0.4),
+              child: Container(
+                height: 40.0,
+                width: 60.0,
+                color: Colors.yellow,
+              )
+            ),
+          ),
+          Container(
+            height: 300.0,
+            width: 300.0,
+            color: Colors.yellow,
+            child: Align(
+              alignment: const FractionalOffset(0.2,0.4),
+              child: Container(
+                height: 40.0,
+                width: 60.0,
+                color: Colors.red,
+              )
+            ),
+          ),
+          ]
         )
       )
     );
