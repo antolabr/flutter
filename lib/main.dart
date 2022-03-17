@@ -28,25 +28,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  String title = "un message au centre de l'appli";
+  get getTitle => title;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  set setTitle( title) => this.title = title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: Text(
-          "Hello worlds",
-          style: TextStyle(fontWeight: FontWeight.bold)
-        ),
+      body: Center(
+        child: Text(title,
+            style: const TextStyle(fontWeight: FontWeight.bold)),
       )
     );
   }
