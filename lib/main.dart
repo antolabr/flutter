@@ -37,6 +37,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             ProduitBox(item: items[0]),
             ProduitBox(item: items[1]),
+            ProduitBox(item: items[2]),
           ]
         )
       )
