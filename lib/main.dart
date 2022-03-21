@@ -26,21 +26,21 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   final List<Produit> items = Produit.getProduit();
+  final List<ProduitBox> test = [];
   @override
   Widget build(BuildContext context) {
+    for (var item in items) {
+      {
+        test.add(ProduitBox(item: item));
+      }
+    }
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center (
-        child: Column(
-          children: [
-            ProduitBox(item: items[0]),
-            ProduitBox(item: items[1]),
-            ProduitBox(item: items[2]),
-          ]
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Center(
+            child: Column(children: test)
         )
-      )
     );
   }
 }
