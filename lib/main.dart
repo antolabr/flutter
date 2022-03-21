@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+//utiliser cupertino au lieu de material pour du iOS pur 💩
+import 'produit_box.dart';
+import 'produit_2.dart';
+import 'produit_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lime,
       ),
-      home: const MyHomePage(title: 'le flutter 3'),
+      home: MyHomePage(title: 'le flutter 3'),
       // ne plus avoir de bandeau test ^^
       debugShowCheckedModeBanner: false,
     );
@@ -21,17 +26,32 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
+  final List<Produit> items = Produit.getProduit();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: const Center(
-          child: Text('test')
-        ));
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body:ListView.builder(
+        itemCount: items.length,
+        itemBuilder: ((context, index){
+          return GestureDetector(
+            child: ProduitBox(item: items[index]),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context)=> ProduitPage(item: items[index])
+                )
+              );
+            }
+          );
+        })
+      )
+    );
   }
 }
