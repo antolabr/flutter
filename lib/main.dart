@@ -4,7 +4,6 @@ import 'produit_box.dart';
 import 'produit_2.dart';
 import 'produit_page.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.lime,
+        primarySwatch: Colors.deepOrange,
       ),
       home: MyHomePage(title: 'le flutter 3'),
       // ne plus avoir de bandeau test ^^
@@ -36,22 +35,22 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body:ListView.builder(
+      body: ListView.builder(
         itemCount: items.length,
-        itemBuilder: ((context, index){
+        itemBuilder: ((context, index) {
           return GestureDetector(
             child: ProduitBox(item: items[index]),
-            onTap: (){
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context)=> ProduitPage(item: items[index])
-                )
+                  builder: (context) => ProduitPage(item: items[index]),
+                ),
               );
-            }
+            },
           );
-        })
-      )
+        }),
+      ),
     );
   }
 }

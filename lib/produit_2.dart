@@ -5,7 +5,7 @@ class Produit {
   final int prix;
 
   Produit(this.name, this.description, this.prix, this.image);
-  static List<Produit> getProduit(){
+  static List<Produit> getProduit() {
     List<Produit> items = <Produit>[];
 
     items.add(
@@ -14,7 +14,7 @@ class Produit {
         "c'est nul",
         10000,
         "assets/iphone.png",
-      )
+      ),
     );
     items.add(
       Produit(
@@ -22,7 +22,7 @@ class Produit {
         "c'est pas ouf",
         10,
         "assets/huawei.png",
-      )
+      ),
     );
     items.add(
       Produit(
@@ -30,7 +30,7 @@ class Produit {
         "c'est pour coder",
         1000,
         "assets/pc.png",
-      )
+      ),
     );
     items.add(
       Produit(
@@ -38,7 +38,7 @@ class Produit {
         "ca passe",
         100,
         "assets/pixel.png",
-      )
+      ),
     );
     items.add(
       Produit(
@@ -46,7 +46,7 @@ class Produit {
         "c'est sympa",
         200,
         "assets/S10.png",
-      )
+      ),
     );
     items.add(
       Produit(
@@ -54,7 +54,7 @@ class Produit {
         "ca va",
         100,
         "assets/xiaomi.png",
-      )
+      ),
     );
 
     return items;

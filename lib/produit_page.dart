@@ -26,23 +26,19 @@ class ProduitPage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
-                        item.name,
-                        style: const TextStyle(fontWeight: FontWeight.bold)
-                      ),
+                      Text(item.name,
+                          style: const TextStyle(fontWeight: FontWeight.bold)),
                       Text(item.description),
-                      Text(
-                        'Prix: ' + item.prix.toString() + '€'
-                      ),
+                      Text('Prix: ' + item.prix.toString() + '€'),
                       RatingBox(),
                     ],
-                  )
+                  ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ),
-      )
+      ),
     );
   }
 }
